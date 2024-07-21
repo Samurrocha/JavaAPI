@@ -1,6 +1,6 @@
 # JavaAPI
 
-Um simples sistemas de controle de pedidos em uma loja. Cada  cliente pode fazer muitos pedidos e cada pedido é pertencente a um único cliente.
+Um simples sistemas de controle de pedidos em uma loja utilizando Java e o frameWork SpringBoot. Cada  cliente pode fazer muitos pedidos e cada pedido é pertencente a um único cliente.
 
 ## tecnologias/ferramentas 
 
