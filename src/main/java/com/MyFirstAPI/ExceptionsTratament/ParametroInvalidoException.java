@@ -1,4 +1,4 @@
-package com.MyFirst.ExceptionsTratament;
+package com.MyFirstAPI.ExceptionsTratament;
 
 public class ParametroInvalidoException extends RuntimeException {
 

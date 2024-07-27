@@ -4,12 +4,16 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import  jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import  jakarta.persistence.Table;
+
 
 @Entity
 @Table(name = "tbl_users")
@@ -24,15 +28,16 @@ public class Users implements Serializable{
 	private String cpf;
 	
 	@OneToMany(mappedBy = "client")
+	@JsonManagedReference
 	private List<Orders> orders = new ArrayList<>();
 
 	public Users() {
 		
 	};
 	
-	public Users(long id, String name, String cpf) {
+	public Users(String name, String cpf) {
 		
-		this.id = id;
+		
 		this.name = name;
 		this.cpf = cpf;
 	};
